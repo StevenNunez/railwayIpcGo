@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package railway_ipc.sample;
+
+message AddResponse {
+  string user_uuid = 1;
+  string correlation_id = 2;
+  string uuid = 3;
+
+  message Data {
+    int32 result = 1;
+  }
+
+  map<string, string> context = 4;
+
+  Data data = 5;
+}
